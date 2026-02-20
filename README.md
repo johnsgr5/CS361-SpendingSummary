@@ -3,7 +3,7 @@ The summary.py microservice is a service responsible for creating and displaying
 
 When a user writes the command RUN_SUMMARY to this the text file to start the microservice. It prompts the user to enter a month and year in MM/YYYY format, then loads financial data from expenses.txt and budget.txt. The service calculates total spending per category for the selected month, compares each category’s spending against its corresponding monthly budget, and determines whether the user is within budget, over budget, or has no budget set (for each category). 
 
-It formats these results into a small summary, saves the output to summary.txt, and sends the formatted text back to the “main program” for display. Once processing is complete, the microservice sends the output, followed by a “done” message.
+It formats these results into a small summary, saves the output to summary.txt, and sends the formatted text back to the “main program” for display. Once processing is complete, the microservice sends the output, followed by a “done” message. Also as added confirmation, the microservice prints its most recent summary into summary.txt
 
 
 To request data the user must simply send “RUN_SUMMARY” into the communicator.txt with both the sender.py and summary.py active, as well as having data entries into expense.txt and budget.txt
@@ -77,3 +77,4 @@ Finally, after sending the display message, the microservice send STATUS|DONE to
             return
 
 
+<img width="1902" height="1132" alt="image" src="https://github.com/user-attachments/assets/e84fc08e-4ca8-444d-9ef9-29eacdf9e24f" />
