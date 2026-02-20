@@ -77,4 +77,6 @@ Finally, after sending the display message, the microservice send STATUS|DONE to
             return
 
 
-<img width="1902" height="1132" alt="image" src="https://github.com/user-attachments/assets/e84fc08e-4ca8-444d-9ef9-29eacdf9e24f" />
+ <img width="1718" height="1026" alt="image" src="https://github.com/user-attachments/assets/c6bc3d1b-89be-493e-a73a-1f76f9925b4f" />
+<img width="1718" height="1026" alt="image" src="https://github.com/user-attachments/assets/8d0f4afb-0b30-4567-adf3-a9fc4f1c6f9b" />
+
