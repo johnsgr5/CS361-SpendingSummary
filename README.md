@@ -77,8 +77,3 @@ Finally, after sending the display message, the microservice send STATUS|DONE to
             return
 
 
-
-Summary.py -> communicator.txt: STATUS|DONE
-
-Main.py -> communicator.txt: (reads DONE)
-Main.py -> User: Display "Operation completed"
