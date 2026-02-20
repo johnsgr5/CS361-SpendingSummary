@@ -10,9 +10,9 @@ To request data the user must simply send “RUN_SUMMARY” into the communicato
 
 An example request includes:
 
-def view_summary_flow():
-write_communicator("RUN_SUMMARY")
-wait_for_service_done()
+        def view_summary_flow():
+            write_communicator("RUN_SUMMARY")
+            wait_for_service_done()
 
 Which sends 
 
@@ -20,8 +20,8 @@ RUN_SUMMARY
 
 To communicator.txt, which is detected by 
 
-if read_communicator() == "RUN_SUMMARY":
-run_summary()
+        if read_communicator() == "RUN_SUMMARY":
+            run_summary()
 
 The microservice is also made to extract data from expense.txt and budget.txt. expense.txt should store data as
 
@@ -77,36 +77,6 @@ Finally, after sending the display message, the microservice send STATUS|DONE to
             return
 
 
-Participant User
-Participant Main.py
-Participant communicator.txt
-Participant expense.txt
-Participant budget.txt
-Participant Summary.py
-
-User -> Main.py: Select "View Monthly Summary"
-
-Main.py -> communicator.txt: RUN_SUMMARY
-
-Summary.py -> communicator.txt: (polling detects RUN_SUMMARY)
-Summary.py -> Summary.py: run_summary()
-
-Summary.py -> communicator.txt: PROMPT|Enter month/year
-
-Main.py -> communicator.txt: (reads PROMPT|)
-Main.py -> User: Display prompt
-User -> Main.py: Enter 02/2026
-Main.py -> communicator.txt: INPUT|02/2026
-
-Summary.py -> communicator.txt: (reads INPUT|)
-Summary.py -> Summary.py: Load expenses & budgets (from expenses.txt & budget.txt)
-Summary.py -> Summary.py: Calculate totals
-Summary.py -> summary.txt: Write formatted summary
-
-Summary.py -> communicator.txt: DISPLAY|<summary text>
-
-Main.py -> communicator.txt: (reads DISPLAY|)
-Main.py -> User: Print summary
 
 Summary.py -> communicator.txt: STATUS|DONE
 
