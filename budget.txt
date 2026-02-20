@@ -1,0 +1,3 @@
+2500.00,groceries,monthly
+2750.00,car,monthly
+4000.00,house,monthly
