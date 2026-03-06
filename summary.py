@@ -8,6 +8,9 @@ EXPENSE_FILE = "expenses.txt"
 BUDGET_FILE = "budget.txt"
 SUMMARY_FILE = "summary.txt"
 
+# Constants
+POLL_INTERVAL = 0.2
+
 
 def read_communicator():
     if not os.path.exists(COMM_FILE):
@@ -24,7 +27,7 @@ def write_communicator(message):
 def wait_for_input():
     """Wait for INPUT| message from main"""
     while True:
-        time.sleep(0.2)
+        time.sleep(POLL_INTERVAL)
         msg = read_communicator()
 
         if msg.startswith("INPUT|"):
@@ -158,7 +161,7 @@ if __name__ == "__main__":
     clear_summary_file()
 
     while True:
-        time.sleep(0.2)
+        time.sleep(POLL_INTERVAL)
 
         if read_communicator() == "RUN_SUMMARY":
             run_summary()
